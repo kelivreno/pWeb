@@ -83,6 +83,15 @@ h3 {font-size: var(--fs-h3)}
 
 }
 
+
+/*Header*/
+nav { display: none}
+
+/*Intro*/
+.intro {
+    position: relative
+}
+
 span.weak {
     font-family: var(--ff-secondary)
 }
