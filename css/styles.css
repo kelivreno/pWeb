@@ -65,6 +65,31 @@ section {
     padding: 5em 2em;
 }
 
+:focus {
+    outline: 3px solid var(--clr-green);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--clr-green);
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
 /* Typography */
 h1,
 h2,
@@ -141,4 +166,58 @@ span.text--intro {
         width: calc(100% + 1.5em);
     }
 
+}
+
+/* My services */
+
+.my-services {
+    background-color: #1c3f5f;
+    background-image:url(../img/services-bg.jpg);
+    background-size: cover;
+    /*background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-green);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+    /* current color means that 
+    the color that is in the services up */
+}
+
+.service {
+    max-width: 500px;
+    margin-bottom: 4em;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+
+    }
+
+}
+
+/* About me */
+
+.about-me {
+    position: relative;
 }
