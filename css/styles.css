@@ -10,21 +10,25 @@
     --ff-secondary:'Nunito Sans', sans-serif;
 
     --fw-reg:10;
-    --fw-bold:900;
+    --fw-bold:10;
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e8bd;
+    --clr-green: #80d756;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+         
 }
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem;
+        --fs-h1: 3.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
@@ -32,6 +36,10 @@
 
 
     }
+}
+
+span.text--intro {
+    color: white;
 }
 
 /* General styles */
@@ -48,6 +56,12 @@ body {
 img {
     display: block;
     max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
 }
 
 section {
@@ -78,11 +92,10 @@ h3 {font-size: var(--fs-h3)}
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--clr-accent);
+    background: var(--clr-green);
     font-family: var(--ff-secondary);
-
+    margin-bottom: 1em;
 }
-
 
 /*Header*/
 nav { display: none}
@@ -94,4 +107,33 @@ nav { display: none}
 
 span.weak {
     font-family: var(--ff-secondary)
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row:2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+
 }
