@@ -38,9 +38,6 @@
     }
 }
 
-span.text--intro {
-    color: white;
-}
 
 /* General styles */
 
@@ -107,6 +104,14 @@ nav { display: none}
 
 span.weak {
     font-family: var(--ff-secondary)
+}
+
+span.text--intro {
+    color: white;
+}
+
+.section__subtitle--intro {
+    display: inline-block;
 }
 
 @media (min-width: 600px) {
