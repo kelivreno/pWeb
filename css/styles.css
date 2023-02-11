@@ -416,6 +416,7 @@ span.text--intro {
 .form {
     display: flex;
     flex-direction: column;
+    font-size: var(--fs-body);
     align-items: center;
     justify-content: center;
     }
